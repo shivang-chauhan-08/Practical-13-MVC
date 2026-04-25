@@ -1,0 +1,17 @@
+﻿@model EFCodeFirst.Models.Entities.Designation
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add Designation</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+
+    <br />
+    <br />
+
+    <button type="submit">Add Designation</button>
+}

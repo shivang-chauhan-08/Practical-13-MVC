@@ -1,0 +1,36 @@
+﻿@model IEnumerable<EFCodeFirst.Models.Entities.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Task - 1</h2>
+
+<br />
+<br />
+<button>@Html.ActionLink("Add Employee", "Create", "Task_1")</button>
+<br />
+<br />
+<h4>Employee List</h4>
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Id)</th>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.DOB)</th>
+        <th>@Html.DisplayNameFor(model => model.Age)</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.DOB</td>
+            <td>@emp.Age</td>
+            <td>@Html.ActionLink("Edit", "Update", "Task_1", new { id = emp.Id }, null) | 
+            @Html.ActionLink("Delete", "Delete", "Task_1", new { id = emp.Id }, null)</td>
+        </tr>
+    }
+</table>

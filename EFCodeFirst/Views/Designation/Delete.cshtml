@@ -1,0 +1,18 @@
+﻿@model EFCodeFirst.Models.Entities.Designation
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h2>Delete Designation ?</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    <button class="btn btn-danger" type="submit">Delete Designation</button>
+}

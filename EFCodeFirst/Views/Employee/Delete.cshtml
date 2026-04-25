@@ -1,0 +1,53 @@
+﻿@model EFCodeFirst.Models.Entities.Employee2
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Employee ?</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.MiddleName)
+    @Html.TextBoxFor(m => m.MiddleName, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.DOB)
+    @Html.TextBoxFor(m => m.DOB, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.MobileNumber)
+    @Html.TextBoxFor(m => m.MobileNumber, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.Address)
+    @Html.TextBoxFor(m => m.Address, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.Salary)
+    @Html.TextBoxFor(m => m.Salary, new { @disabled = "disabled" })
+
+    <br />
+    <br />
+
+    <button class="btn btn-danger" type="submit">Delete Employee</button>
+}

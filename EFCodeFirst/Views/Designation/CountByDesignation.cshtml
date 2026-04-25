@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EFCodeFirst.Models.ViewModels.CountVM>
+@{
+    ViewBag.Title = "CountByDesignation";
+}
+
+<h2>No. Of Employees By Designation</h2>
+
+
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Designation)</th>
+        <th>@Html.DisplayNameFor(model => model.Count)</th>
+    </tr>
+
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Designation</td>
+            <td>@emp.Count</td>
+        </tr>
+    }
+</table>
+
+
+<button class="btn btn-warning">@Html.ActionLink("Back", "Index", "Designation")</button>
